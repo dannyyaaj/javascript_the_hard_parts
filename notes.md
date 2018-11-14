@@ -21,7 +21,11 @@ const name = "Danny"
 
 * Live memory of variables with data (known as Global Variable Environment)
 
-### Running/calling/invoking af unction
+### Running/calling/invoking a function
+
+* You can define a function by using the keyword function
+
+* You can execute a function by adding parenthesis
 
 * This is not the same as defining a function
 
@@ -43,3 +47,7 @@ const newOutput = multiplyBy2(10);
 
 * When you run a function, you create a local execution context
   * Inside the local execution context, it has a local thread (pauses doing code in global scope and starts doing code inside function / local scope) and local memory (variable environment)
+
+1. In the above code, we take the parameter, inputNumber and assign it the value of 4
+2. We store the evaluated result of inputNumber inside of the variable constant called result
+3. Return result and store the value in the variable called output
