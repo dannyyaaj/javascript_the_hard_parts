@@ -51,3 +51,43 @@ const newOutput = multiplyBy2(10);
 1. In the above code, we take the parameter, inputNumber and assign it the value of 4
 2. We store the evaluated result of inputNumber inside of the variable constant called result
 3. Return result and store the value in the variable called output
+
+## Callbacks and Higher order functions
+
+* Which of these is our callback? And which is our higher order function?
+
+* copyArrayandManipulate is our higher order function and instructions is our callback function
+
+```javascript
+  function copyArrayAndManipulate(array, instructions) { 
+      let output = [];
+      for (let i = 0; i < array.length; i++) {
+          output.push(instructions(array[i]));
+      }
+      return output
+  }
+
+function multiplyBy2(input) {
+    return input * 2;
+}
+
+let result = copyArrayAndManipulate([1,2,3], multiplyBy2);
+```
+
+* A higher order function is any function that can take in or return another function
+
+* a callback function is a function that gets passed in as a parameter to another function
+
+* So callbacks and higher order functions simplify our code and keep it DRY
+
+* They allow us to run asynchronous code
+
+## Closure
+
+* When our functions get called, we create a live store of data (variable environment/state) for that function's execution context
+
+* When the function finishes executing, the local memory is deleted (except the returned value)
+
+* But what if our functions could hold on to live data/state between executions? This would let our function definitions have an associated cache/persistent memory
+
+* But it starts with returning a function from another function
